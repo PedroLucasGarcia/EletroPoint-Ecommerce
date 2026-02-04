@@ -17,6 +17,7 @@ section{
     margin: 1rem 0rem;
     background-color: #fff;
     border-radius: 25px;
+    padding-top: 1rem;
 }
 
 
@@ -67,13 +68,12 @@ section{
     width: 100%;
     background-color: #f5f5f5;
     color: #333;
-    
 }
 
 /*ITEM STYLES*/
 .img{
-    max-height: 270px;
     max-width: 250px;
+    max-height: 270px;
     border-radius: 2rem;
     padding: 1rem;
 }
