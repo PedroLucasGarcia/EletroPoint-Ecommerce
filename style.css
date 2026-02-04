@@ -1,128 +1,183 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
-/*GERAL*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Geral */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
     list-style: none;
+}
+body { 
+    font-family: Arial, sans-serif; 
 }
 a, a:hover {
     text-decoration: none;
+    color: #000;
+}
+button {
+    border: none;
+    cursor: pointer; 
+    font-size: 1rem;
+    margin: 0 0.8rem;
+    border: none;
+    background-color: transparent;
 }
 
-/*HEADER*/
-#header {
+/*********************************************************************************************/
+
+/* NAVBAR */
+.navbar {
     font-family: "League Spartan", 'Poppins', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 7vh;
+    padding: 1.5rem;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
-    color: #2e2e2e;
-    transition: background-color 0.3s ease-in-out;
-    z-index: 1000;
-}
-header a {
-    color: #2e2e2e;
-    font-weight: 300;
-}
-header a:hover {
-    color: #000;
-}
-
-/*NAVBAR*/
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 7vh;
-    gap: 3rem;
+    background: #fff;
+    z-index: 100;
 }
 .nav-list {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 4rem;
+}
+.nav-list a {
+    padding: 0.5rem;
 }
 
-/*LOGO*/
-.logo img{
+/* LOGO */
+.logo img {
     width: 65px;
-}
-img:hover{
-    transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-/*SEARCH BOX*/
-.search-box {
+/* MENU */
+.menu {
+    display: flex;
+    gap: 32px;
+}
+.menu-item {
     position: relative;
-}
-.search-box input {
-    width: 350px;
-    height: 2rem;
-    padding: 0.8rem;
-    padding-right: 2.5rem;
-    font-size: 0.9rem;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-}
-.search-box input:focus {
-    outline: none;
-}
-.search-box .search-btn {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
     cursor: pointer;
-    padding-top: 2px;
+    padding: 10px 0;
+}
+.menu-item:hover .dropdown {
+    display: block;
+}
+.menu-item a {
+    font-size: 0.9rem;
 }
 
-/*NAV LIST*/
-ul {
-    margin: 0;
-    padding: 0;
+/* DROPDOWN */
+.dropdown {
+    display: none;
+    position: fixed; 
+    top: 7vh;
+    left: 0;
+    width: 100vw;
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 2rem 3rem;
+    z-index: 1000;
 }
-li a{
-    font-size: 1rem;
-    font-weight: 300;
+.dropdown-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+.dropdown-box {
+    text-align: center;
+}
+.icon-menu {
+    padding-bottom: 1rem;
 }
 
-/*ICONS*/
+/* ICONES */
 .icons {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
     color: #2e2e2e;
 }
-.bi.bi-person, .bi.bi-bag{
-    cursor: pointer;
+.icon-search svg {
+    width: 16px;
+    height: 16px;
 }
-.bi.bi-bag{ 
+.icon-user svg, .icon-bag svg {
+    width: 20px;
+    height: 20px;
+}
+.icon-hamburguer svg {
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+.icon-menu svg {
+    width: 80px;
+    height: 80px;
+}
+.bi.bi-bag { 
     padding: 2px;
 }
+.icon-xiaomi, .icon-xbox {
+    padding: 1rem;
+}
+.icon-amd {
+    padding: 0.5rem;
+}
 
-/*BUTTON*/
-button {
+/* PESQUISA */
+.search-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 2rem 20rem;
+}
+.search-title {
+    font-size: 2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.search-container input {
+    width: 100%;
+    padding: 1rem;
     font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    opacity: 0.5;
+}
+.search-container input:focus {
+    outline: none;
+}
+.search-results {
+    margin-top: 20px;
+}
+.search-results div {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
     cursor: pointer;
-    margin: 0 0.8rem;
-    border: none;
 }
-.button {
-    text-align: center;
-    margin-bottom: 2rem;
-}
+
+/*********************************************************************************************/
 
 /*CAROUSEL*/
 .carousel {
     margin-top: 7vh;
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     position: relative;
     overflow: hidden;
 }
@@ -144,14 +199,11 @@ button {
     opacity: 1;
     transform: translateX(0);
 }
-.item1 {
+.item1, .item2 {
     background-color: #000;
 }
-.item2 {
-    background-color: #000;
-}
-.item3 {
-    background-color: #fff;
+.item3{
+    background-color: #dad9de;
 }
 
 /*IMAGE*/
@@ -165,16 +217,14 @@ button {
     z-index: 2;
 }
 .item2 .carousel-img {
-    align-items: center;
+    align-items: baseline;
 }
 .item3 .carousel-img {
-    align-items: baseline;
-    height: 90%;
-}
-
+        align-items: center;
+    }
 .carousel-img img {
     max-width: 100%;
-    max-height: 90%;
+    max-height: 100%;
     transition: transform 0.4s ease;
     transform: translateX(200px);
     opacity: 0;
@@ -189,19 +239,19 @@ button {
 .carousel-img img:hover {
     transform: scale(1.0);
 }
-.carousel{
-    margin-top: 7vh;
+.item1 .carousel-img img {
+    max-height: 90%;
 }
 
 /*CONTENT*/
 .carousel-content {
-    width: 30%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    bottom: 10px;
+    bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -215,11 +265,13 @@ button {
     font-weight: 500;
     margin-bottom: 10px;
 }
-.item3 .carousel-content .price {
-    color: #2e2e2e;
-}
+
 
 /*BUTTON*/
+.button {
+    text-align: center;
+    margin-bottom: 2rem
+}
 .btn {
     padding: 12px 18px;
     border-radius: 20px;
@@ -280,49 +332,64 @@ button {
     opacity: 1; 
 }
 
+/*********************************************************************************************/
+
 /*FOOTER*/
 section.footer {
     height: 30vh;
     background-color: #fff;
 }
 
+/*********************************************************************************************/
+
 /*MEDIA QUERIES*/
 @media (max-width:1280px) {
-    .nav {
-        height: 10vh;
-        gap: 0.9rem;
-    }
     .nav-list {
-        gap: 0.5rem;
+        gap: 2rem;
     }
-    .search-box input {
-    width: 220px;
-    height: 0.5rem;
-    padding: 0.8rem;
-    font-size: 0.8rem;
+    .logo img{
+        width: 55px;
+        max-width: 65px;
     }
-    .search-btn i {
-        font-size: 0.9rem;
+    .icon-search svg {
+        width: 14px;
+        height: 14px;
     }
-    li a {
-        font-size: 0.9rem;
-    }
-    i {
-        font-size: 1rem;
-    }
-    .icons {
-    padding-left: 0rem;
-    gap: 1rem;
+    .icon-user svg, .icon-bag svg, .icon-hamburguer svg{
+        width: 18px;
+        height: 18px;
     }
     .carousel {
-        margin-top: 10vh;
+        height: 60vh;
     }
     .carousel-img img {
     max-height: 80%;
     }
-    .carousel-content .price {
-        font-size: 0.9rem;
-        margin-bottom: 5px;
+    .carousel-content .price{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 1023.98px) {
+    .nav-list {
+        display: none;
+    }
+    .logo img{
+        width: 50px;
+        max-width: 55px;
+    }
+    .icon-search svg {
+        width: 12px;
+        height: 12px;
+    }
+    .icon-user svg, .icon-bag svg, .icon-hamburguer svg{
+        width: 16px;
+        height: 16px;
+    }
+    .nav-list {
+        display: none;
+    }
+    .icon-hamburguer svg{
+        display: block;
     }
     button {
         font-size: 0.8rem;
@@ -340,31 +407,33 @@ section.footer {
         bottom: 10px;
     }
 }
+
 @media (max-width: 767.98px) {
     .logo img{
-        width: 48px;
-    }
-    .nav {
-        height: 12vh;
-        gap: 0.5rem;
-    }
-    .search-box input {
-    width: 150px;
-    height: 0.5rem;
-    padding: 0.6rem;
-    font-size: 0.7rem;
-    }
-    .search-btn i {
-        font-size: 0.8rem;
+        width: 40px;
+        max-width: 50px;
     }
     li a {
         font-size: 0.8rem;
     }
-    i {
-        font-size: 0.9rem;
+    .search-container {
+        padding: 1.5rem;
+    }
+    .search-title {
+        font-size: 1.5rem; 
+    }
+    .search-container input {
+        font-size: 0.8rem;
+        padding: 0.8rem;
     }
     .carousel {
-        margin-top: 12vh;
+        height: 45vh;
     }
-
+    .carousel-content .price{
+        font-size:0.8rem;
+    }
+    .button {
+        text-align: center;
+        margin-bottom: 1rem
+    }
 }
