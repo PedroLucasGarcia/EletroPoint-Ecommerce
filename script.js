@@ -1,3 +1,54 @@
+// SEARCH BOX
+const searchIcon = document.getElementById('searchIcon');
+const searchBox = document.getElementById('searchBox');
+const searchInput = document.getElementById('searchInput');
+const results = document.getElementById('results');
+
+const products = [
+'iPhone 17 Pro',
+'iPhone 16',
+'Xiaomi 14',
+'Redmi Note 13',
+'Mi Band 8',
+'Apple Watch Ultra'
+];
+
+searchIcon.addEventListener('click', () => {
+searchBox.style.display = searchBox.style.display === 'block' ? 'none' : 'block';
+searchInput.focus();
+});
+
+searchInput.addEventListener('input', () => {
+const value = searchInput.value.toLowerCase();
+results.innerHTML = '';
+
+products
+    .filter(p => p.toLowerCase().includes(value))
+    .forEach(p => {
+    const div = document.createElement('div');
+    div.textContent = p;
+    div.onclick = () => alert('Redirecionar para: ' + p);
+    results.appendChild(div);
+    });
+});
+
+
+document.querySelectorAll('.menu-item').forEach(item => {
+    let timer;
+    const dropdown = item.querySelector('.dropdown');
+
+    item.addEventListener('mouseenter', () => {
+        clearTimeout(timer);
+        dropdown.style.display = 'block';
+    });
+
+    item.addEventListener('mouseleave', () => {
+        timer = setTimeout(() => {
+        dropdown.style.display = 'none';
+        }, 200);
+    });
+});
+// --------------------------------------------------------------------------------
 // CAROUSEL 
 const prevBtn = document.getElementById('prev-btn')
 const nextBtn = document.getElementById('next-btn')
@@ -69,10 +120,10 @@ const sort = sortSelect.value;
 // ===== FILTRO POR MARCA =====
 allProducts.forEach(product => {
     if (brand === 'all') {
-    product.style.display = 'block';
+    product.style.display = 'flex';
     } else {
-    product.style.display = product.classList.contains(`smartphones-${brand}`)
-        ? 'block'
+    product.style.display = product.classList.contains(`produto-${brand}`)
+        ? 'flex'
         : 'none';
     }
 });
@@ -97,7 +148,6 @@ visibleProducts.forEach(product => container.appendChild(product));
 function getPriceValue(product) {
 const text = product.querySelector('.price').textContent;
 
-// "Desde 1349 €" → 1349
 return parseFloat(
     text.replace('Desde', '').replace('€', '').trim()
 );
