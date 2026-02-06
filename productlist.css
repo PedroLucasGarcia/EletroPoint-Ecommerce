@@ -112,7 +112,7 @@ section{
 /*MEDIA QUERIES*/
 @media (max-width:1280px) {
     .title-filters .title {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     .section-container{ 
         grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
@@ -141,8 +141,7 @@ section{
     .filters {
         gap: 1rem;
     }
-    .title-filters .title {
-        margin: 3rem 1rem;
+    .title-filters .title {     
         font-size: 1.8rem;
         letter-spacing: -1px;
     }
