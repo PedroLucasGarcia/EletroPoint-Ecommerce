@@ -192,11 +192,13 @@ button {
     align-items: center;
     justify-content: center;
     opacity: 0;
+    pointer-events: none;
     transform: rotateX(100vw);
-    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    transition: opacity 0.5s ease;
 }
 .active {
     opacity: 1;
+    pointer-events: auto;
     transform: translateX(0);
 }
 .item1, .item2 {
@@ -220,8 +222,8 @@ button {
     align-items: baseline;
 }
 .item3 .carousel-img {
-        align-items: center;
-    }
+    align-items: center;
+}
 .carousel-img img {
     max-width: 100%;
     max-height: 100%;
@@ -265,7 +267,6 @@ button {
     font-weight: 500;
     margin-bottom: 10px;
 }
-
 
 /*BUTTON*/
 .button {
@@ -335,9 +336,45 @@ button {
 /*********************************************************************************************/
 
 /*FOOTER*/
-section.footer {
-    height: 30vh;
-    background-color: #fff;
+.footer {
+    background: #fff;
+    padding: 60px 40px 0px 40px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+.footer-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000;
+}
+.footer-item a {
+    display: block;
+    font-size: 13px;
+    color: #6e6e73;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+.footer-item a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+.footer-copy {
+    border-top: 1px solid #b9b9bd;
+    padding: 1rem;
+}
+.footer-copy p {
+    font-size: 0.7rem;
+    text-align: center;
 }
 
 /*********************************************************************************************/
@@ -360,10 +397,10 @@ section.footer {
         height: 18px;
     }
     .carousel {
-        height: 60vh;
+        height: 50vh;
     }
     .carousel-img img {
-    max-height: 80%;
+        max-height: 80%;
     }
     .carousel-content .price{
         font-size: 1rem;
@@ -406,9 +443,15 @@ section.footer {
     .indicators {
         bottom: 10px;
     }
+    .carousel-content .price{
+        font-size: 0.8rem;
+    }
+    .carousel-content {
+        bottom: 0.5rem;
+    }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px){
     .logo img{
         width: 40px;
         max-width: 50px;
@@ -427,13 +470,31 @@ section.footer {
         padding: 0.8rem;
     }
     .carousel {
-        height: 45vh;
-    }
-    .carousel-content .price{
-        font-size:0.8rem;
+        height: 30vh;
     }
     .button {
         text-align: center;
         margin-bottom: 1rem
+    }
+    .footer-copy p {
+        font-size: 0.6rem;
+    }
+}   
+
+@media (max-width: 1023.98px) and (max-height: 540px) {
+    .carousel {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
