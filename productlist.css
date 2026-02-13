@@ -20,11 +20,20 @@ section{
     padding-top: 1rem;
 }
 
+/*********************************************************************************************/
+
+/*BANNER*/
+.banner {
+    margin-top: 7vh;
+    width: 100%;
+}
+
+/*********************************************************************************************/
 
 /*FILTERS*/
 .title-filters .title {
     font-family: "League Spartan",'Segoe UI', Arial, sans-serif;
-    margin: 3rem 0 3rem 0;
+    margin: 3rem 0;
     text-align: center;
     font-size: 3rem;
     font-weight: 400;
@@ -45,9 +54,6 @@ section{
     align-items: center;
     justify-content: center;
 }
-.filter-group label {
-    padding-right: 0.5rem;
-}
 .filter-group select {
     padding: 8px 10px;
     font-size: 1rem;
@@ -60,6 +66,8 @@ section{
 .filter-group select:focus {
     outline: none;
 }
+
+/*********************************************************************************************/
 
 /*PRODUCTS*/
 .section-produts {
@@ -99,6 +107,10 @@ section{
     margin: 1rem; 
     font-weight: 400;
 }
+.section-produts .button  {
+    margin-bottom: 2rem; 
+    font-size: 1rem;
+}
 .btn-1{
     padding: 10px 25px;
     border-radius: 20px;
@@ -108,6 +120,7 @@ section{
 .btn-1:hover{
     background-color: #005bb5;
 }
+/*********************************************************************************************/
 
 /*MEDIA QUERIES*/
 @media (max-width:1280px) {
@@ -131,17 +144,12 @@ section{
         font-size: 1rem;
     }
 }
+
 @media (max-width: 767.98px) {
-    .section-container {
-        margin: 0 1rem;
-    }
-    .containers{
-        margin:0.5rem 0rem;
-    }
-    .filters {
+    .filters { 
         gap: 1rem;
     }
-    .title-filters .title {     
+    .title-filters .title {  
         font-size: 1.8rem;
         letter-spacing: -1px;
     }
@@ -169,7 +177,7 @@ section{
         padding: 0;
     }
     .description, .description2 {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
     .img {
         max-width: 160px;
@@ -185,5 +193,13 @@ section{
     }
     .btn-1 {
         padding: 8px 16px;
+        font-size: 0.8rem;
     }
+}
+
+@media (max-width: 1023.98px) and (max-height: 540px) {
+    .banner {
+        margin-top: 12vh;
+    }
+                                                                                        
 }
