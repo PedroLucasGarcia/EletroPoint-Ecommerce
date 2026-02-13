@@ -219,73 +219,13 @@
         <div class="search-container" id="searchBox">
             <span class="search-title">O que procuras?</span>
             <input type="text" id="searchInput" placeholder="Pesquisar produto">
-        <div class="search-results" id="results">
-        
+        <div class="search-results" id="results"> 
     </nav>
 
-    <section class="carousel">
-        <div class="carousel-list">
-            <div class="item1 item active">
-                <div class="carousel-img">
-                    <img src="../img/smartphones/apple/carousel-iphone-17-pro.jpg" alt="Iphone 17 Pro">
-                </div>
-                <div class="carousel-content">
-                    <p class="price">Desde 1349 €</p>
-                    <div class="button">
-                        <button class="btn" onclick="location.href='../smartphones/iphone17Pro.html'" title="Saiba mais">Saiba mais</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item2 item">
-                <div class="carousel-img">
-                    <img src="../img/consolas/sony/carousel-playstation.png" alt="PS5 Pro">
-                </div>
-                <div class="carousel-content">
-                    <p class="price">Desde 799 €</p>
-                    <div class="button">
-                        <button class="btn" onclick="location.href='../consolas/playstation5pro.html'" title="Saiba mais">Saiba mais</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item3 item">
-                <div class="carousel-img">
-                    <img src="../img/smartphones/xiaomi/carousel-xiaomi.jpg" alt="Redmi note 15">
-                </div>
-                <div class="carousel-content">
-                    <p class="price">Desde 499 €</p>
-                    <div class="button">
-                        <button class="btn" onclick="location.href='../smartphones/redmi-note15-pro-plus.html'" title="Saiba mais">Saiba mais</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="arrows">
-            <button class="arrow-btn" id="prev-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
-                </svg>
-            </button>
-            <button class="arrow-btn" id="next-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                </svg>
-            </button>
-        </div>
-        <div class="indicators">
-            <div class="dots">
-                <div class="dot dot1 active"></div>
-                <div class="dot dot2"></div>
-                <div class="dot dot3"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="title-filters">
+    <section class="title-filters" style="padding-top: 7vh;">
         <div class="title"><p>Computadores</p></div>
         <section class="filters">
             <div class="filter-group">
-                <label for="sort">Ordenar por</label>
                 <select id="sort">
                 <option value="relevance">Relevância</option>
                 <option value="price-asc">Preço: menor para maior</option>
@@ -294,9 +234,8 @@
             </div>
 
             <div class="filter-group">
-                <label for="brand">Marca</label>
                 <select id="brand">
-                <option value="all">Todas</option>
+                <option value="all">Marca</option>
                 <option value="amd">AMD</option>
                 <option value="intel">Intel</option>
                 </select>
@@ -430,7 +369,10 @@
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="../seach-box.js"></script>
+    <script src="../menu-hamburguer.js"></script>
+    <script src="../carousel.js"></script>
+    <script src="../filters.js"></script>
 
 </body>
 </html>
