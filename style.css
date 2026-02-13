@@ -97,6 +97,13 @@ button {
 .icon-menu {
     padding-bottom: 1rem;
 }
+.dropdown a:hover {
+    text-decoration: underline;
+    color: #6e6e73;
+}
+.dropdown svg:hover {
+    scale: 1.1;
+}
 
 /* ICONES */
 .icons {
@@ -173,6 +180,36 @@ button {
 
 /*********************************************************************************************/
 
+/*MENU HAMBURGER*/
+.icon-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.nav-list.mobile-active {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;              
+    left: 0;
+    width: 100vw;
+    height: calc(100vh);
+    background: #fff;
+    padding: 20px;
+    z-index: 1001;
+    overflow-y: auto;
+}
+.nav-list li {
+    width: 100%;
+}
+.menu-item a {
+    padding: 15px 0;
+    display: block;
+}
+
+/*********************************************************************************************/
+
 /*CAROUSEL*/
 .carousel {
     margin-top: 7vh;
@@ -180,6 +217,9 @@ button {
     height: 70vh;
     position: relative;
     overflow: hidden;
+}
+.carousel-mobile {
+    display: none;
 }
 .carousel-list {
     width: 100%;
@@ -205,7 +245,7 @@ button {
     background-color: #000;
 }
 .item3{
-    background-color: #dad9de;
+    background-color: #f1f4f6;
 }
 
 /*IMAGE*/
@@ -265,19 +305,22 @@ button {
     font-family: 'Segoe UI', 'Poppins', Arial, sans-serif;
     color: #fff;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 2rem
+}
+.item3 .price {
+    color: #2e2e2e;
 }
 
 /*BUTTON*/
 .button {
     text-align: center;
-    margin-bottom: 2rem
 }
 .btn {
     padding: 12px 18px;
     border-radius: 20px;
     background-color: #06c;
     color: #fff;
+    margin-bottom: 10px;
 }
 .btn:hover {
     background-color: #005bb5;
@@ -297,7 +340,7 @@ button {
     width: 35px;
     height: 35px;
     background-color: transparent;
-    color: #f5f5f5;
+    color: #b9b9bd;
 }
 .arrow-btn:hover {
     color: #ccc;
@@ -321,7 +364,7 @@ button {
 .dot {
     width: 80px;
     height: 4px;
-    background-color: #f5f5f5;
+    background-color: #dbdada;
     border-radius: 2px;
     opacity: 0.4;
     cursor: pointer;
@@ -335,9 +378,61 @@ button {
 
 /*********************************************************************************************/
 
+/*CARDS SECTION*/
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    background-color: #fff;
+}
+
+/*CARDS CONTAINER*/
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+}
+.card-containers1, .card-containers2, .card-containers3, .card-containers4, .card-containers5 {
+    border-radius: 25px;
+    overflow: hidden;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+    background-color: #f5f5f5;
+}
+
+/* CARDS TITLE*/
+.cards-title {
+    font-family: "League Spartan", 'Poppins', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/*CARDS IMAGE*/
+.img-cards {
+    width: 50%;
+    margin: 1.5rem;
+}
+.cards-container img:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+/*********************************************************************************************/
+
 /*FOOTER*/
 .footer {
     background: #fff;
+    padding: 60px 40px 0px 40px;
+}
+.footer-inicial {
+    background-color: #f5f5f5;
     padding: 60px 40px 0px 40px;
 }
 
@@ -354,6 +449,9 @@ button {
     font-weight: 600;
     margin-bottom: 15px;
     color: #000;
+}
+.footer-title a:hover {
+    text-decoration: underline;
 }
 .footer-item a {
     display: block;
@@ -397,7 +495,7 @@ button {
         height: 18px;
     }
     .carousel {
-        height: 50vh;
+        height: 60vh;
     }
     .carousel-img img {
         max-height: 80%;
@@ -408,6 +506,39 @@ button {
 }
 @media (max-width: 1023.98px) {
     .nav-list {
+        display: none;
+    }
+    .icon-hamburguer {
+        display: flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .nav-list.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 80px);
+        background: #fff;
+        padding: 20px;
+        z-index: 999;
+        overflow-y: auto;
+    }
+    .nav-list li {
+        width: 100%;
+    }
+    .menu-item a {
+        padding: 15px 0;
+        display: block;
+        font-size: 18px;
+    }
+    .dropdown {
+        display: none;
+    }
+    .icon-menu a svg {
         display: none;
     }
     .logo img{
@@ -422,32 +553,37 @@ button {
         width: 16px;
         height: 16px;
     }
-    .nav-list {
-        display: none;
-    }
     .icon-hamburguer svg{
         display: block;
     }
     button {
-        font-size: 0.8rem;
+        font-size: 1rem;
         cursor: pointer;
         margin: 0 0.8rem;
         border: none;
-    }
-    .button {
-        margin-bottom:  1rem;
-    }
-    .btn {
-        padding: 8px 16px;
+        margin-bottom:  0px;
     }
     .indicators {
         bottom: 10px;
     }
-    .carousel-content .price{
-        font-size: 0.8rem;
+    .carousel {
+        height: 50vh;
     }
-    .carousel-content {
-        bottom: 0.5rem;
+    .carousel-content .price{
+        margin-bottom:  1rem;
+    }
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 card por linha */
+    }
+    .card-containers1, .card-containers2, .card-containers3, .card-containers4, .card-containers5 {
+        width: 40vw;
+    }
+    .cards-title {
+        font-size: 1.6rem;
+    }
+    .img-cards {
+        width: 60%;
+        margin: 1.5rem;
     }
 }
 
@@ -470,11 +606,18 @@ button {
         padding: 0.8rem;
     }
     .carousel {
-        height: 30vh;
+        height: 40vh;
     }
     .button {
         text-align: center;
-        margin-bottom: 1rem
+        margin-bottom: 0px;
+    }
+    .btn {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+    }
+    .carousel-content .price{
+        font-size: 0.9rem;
     }
     .footer-copy p {
         font-size: 0.6rem;
@@ -484,7 +627,10 @@ button {
 @media (max-width: 1023.98px) and (max-height: 540px) {
     .carousel {
         height: 70vh;
-    }
+    } 
+    .item1 .carousel-img {
+        padding-top: 1rem;
+    }                                                                                              
 }
 
 @media (max-width: 900px) {
@@ -496,5 +642,11 @@ button {
 @media (max-width: 500px) {
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 card por linha */
+    }
+    .card-containers1, .card-containers2, .card-containers3, .card-containers4, .card-containers5 {
+        width: 80vw;
     }
 }
