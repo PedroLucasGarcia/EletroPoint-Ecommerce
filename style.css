@@ -86,13 +86,13 @@ li a {
   top: 7vh;
   left: 0;
   width: 100vw;
-  background: white;
+  background: #fff;
   padding: 50px 0;
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
   transition: 0.2s ease;
-  border: 1px solid red;
+  cursor: auto;
 }
 .nav-list li:hover .dropdown,
 .dropdown:hover {
@@ -142,6 +142,7 @@ li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #2e2e2e;
 }
 
 .icon-user svg, .icon-bag svg {
@@ -150,11 +151,13 @@ li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #2e2e2e;
 }
 .icon-hamburguer svg {
     width: 20px;
     height: 20px;
     display: none;
+    color: #2e2e2e;
 }
 .icon-menu svg {
     width: 80px;
@@ -176,7 +179,7 @@ li a {
     top: 100%;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 93vh;
     background: #fff;
     border-top: 1px solid #eee;
     padding: 2rem 15rem;
@@ -301,12 +304,14 @@ li a {
     align-items: center;
     cursor: pointer;
     padding: 1rem 3rem;
+    color: #000;
 }
 
 /* + / − */
 .mobile-btn .icon {
     font-size: 20px;
     font-weight: 300;
+    color: #000;
 }
 
 /* SUBMENU */
@@ -329,7 +334,7 @@ li a {
     padding: 1rem;
     font-size: 1rem;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 /* VER TODOS */
