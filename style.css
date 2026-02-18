@@ -46,7 +46,7 @@ button {
 .nav-list {
     display: flex;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 2rem;
 }
 .nav-list a {
     padding: 0.5rem;
@@ -71,8 +71,9 @@ li a {
     position: relative;
     cursor: pointer;
     padding: 10px 0;
+    padding-bottom: 15px;
 }
-.menu-item:hover .dropdown {
+.menu-item:hover .dropdown, .dropdown:hover {
     display: block;
 }
 .menu-item a {
@@ -81,35 +82,48 @@ li a {
 
 /* DROPDOWN */
 .dropdown {
-    display: none;
-    position: fixed; 
-    top: 7vh;
-    left: 0;
-    width: 100vw;
-    background: #fff;
-    border-top: 1px solid #eee;
-    padding: 2rem 3rem;
-    z-index: 1000;
+   position: fixed;
+  top: 7vh;
+  left: 0;
+  width: 100vw;
+  background: white;
+  padding: 50px 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s ease;
+  border: 1px solid red;
+}
+.nav-list li:hover .dropdown,
+.dropdown:hover {
+  opacity: 1;
+  visibility: visible;
 }
 .dropdown-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8rem;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: auto;
 }
 .dropdown-box {
-    text-align: center;
+  text-align: center;
 }
-.icon-menu {
-    padding-bottom: 1rem;
+.dropdown-box svg {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+  transition: 0.2s;
 }
-.dropdown a:hover {
-    text-decoration: underline;
-    color: #6e6e73;
+.dropdown-box a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
 }
-.dropdown svg:hover {
-    scale: 1.1;
+.dropdown-box:hover svg {
+  transform: scale(1.1);
 }
+
 
 /* ICONES */
 .icons {
