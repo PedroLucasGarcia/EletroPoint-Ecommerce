@@ -1,48 +1,68 @@
-// FILTERS
-const brandSelect = document.getElementById('brand');
-const sortSelect = document.getElementById('sort');
+/* FILTROS DOS PRODUTOS */
 
-const allProducts = document.querySelectorAll('.containers');
-const container = document.querySelector('.section-container');
+// Selects de marca e ordenação
+const brandSelect = document.getElementById("brand");
+const sortSelect = document.getElementById("sort");
 
-brandSelect.addEventListener('change', applyFilters);
-sortSelect.addEventListener('change', applyFilters);
+// Todos os produtos
+const allProducts = document.querySelectorAll(".containers");
 
+// Container onde os produtos são exibidos
+const container = document.querySelector(".section-container");
+
+// Aplica filtros sempre que o usuário mudar algo
+brandSelect.addEventListener("change", applyFilters);
+sortSelect.addEventListener("change", applyFilters);
+
+/* Aplica filtro e ordenação */
 function applyFilters() {
-const brand = brandSelect.value;
-const sort = sortSelect.value;
 
-// ===== FILTRO POR MARCA =====
-allProducts.forEach(product => {
-    if (brand === 'all') {
-    product.style.display = 'flex';
-    } else {
-    product.style.display = product.classList.contains(`produto-${brand}`)
-        ? 'flex'
-        : 'none';
-    }
-});
+    // Marca selecionada
+    const brand = brandSelect.value;
 
-// ===== ORDENAÇÃO POR PREÇO =====
-const visibleProducts = Array.from(allProducts)
-    .filter(product => product.style.display !== 'none');
+    // Tipo de ordenação
+    const sort = sortSelect.value;
 
-visibleProducts.sort((a, b) => {
-    const priceA = getPriceValue(a);
-    const priceB = getPriceValue(b);
+    // Filtra por marca
+    allProducts.forEach(product => {
+        if (brand === "all") {
+            product.style.display = "flex";
+        } else {
+            product.style.display = product.classList.contains(`produto-${brand}`)
+                ? "flex"
+                : "none";
+        }
+    });
 
-    if (sort === 'price-asc') return priceA - priceB;
-    if (sort === 'price-desc') return priceB - priceA;
-    return 0; // relevância
-});
+    // Produtos visíveis após o filtro
+    const visibleProducts = Array.from(allProducts)
+        .filter(product => product.style.display !== "none");
 
-// Reinsere no DOM na nova ordem
-visibleProducts.forEach(product => container.appendChild(product));
+    // Ordena por preço
+    visibleProducts.sort((a, b) => {
+        const priceA = getPriceValue(a);
+        const priceB = getPriceValue(b);
+
+        if (sort === "price-asc") return priceA - priceB;
+        if (sort === "price-desc") return priceB - priceA;
+
+        return 0;
+    });
+
+    // Reinsere os produtos na nova ordem
+    visibleProducts.forEach(product => {
+        container.appendChild(product);
+    });
 }
-function getPriceValue(product) {
-const text = product.querySelector('.price').textContent;
 
-return parseFloat(
-    text.replace('Desde', '').replace('€', '').trim()
-);
+/* Extrai o valor numérico do preço */
+function getPriceValue(product) {
+
+    // Texto do preço
+    const text = product.querySelector(".price").textContent;
+
+    // Remove texto e símbolo, deixando só o número
+    return parseFloat(
+        text.replace("Desde", "").replace("€", "").trim()
+    );
 }
