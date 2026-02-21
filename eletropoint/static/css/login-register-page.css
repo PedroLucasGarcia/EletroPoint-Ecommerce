@@ -1,0 +1,208 @@
+/*geral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*O preenchimento(padding) e a borda(border) serão incluídos na largura(width) e na altura(height)*/
+}
+
+/*fundo*/
+body{
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /*todo o conteúdo será disposto em uma única coluna verticalmente*/
+}
+
+/*login/register*/
+.loginPage, .registerPage {
+    padding-top: 7vh;
+}
+
+/*container*/
+.container{
+    margin: 4rem 0;
+    background-color: #fff;
+    border-radius: 30px;
+    position: relative; /*Define o posicionamento de um elemento de forma relativa a sua posição original na página*/
+    overflow: hidden;   /*Qualquer conteúdo que ultrapasse os limites do elemento será cortado e não será exibido*/
+    width: 500px;
+    max-width: 100%;
+    min-height: 620px;
+}
+
+/*formulário*/
+.form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /*Especifica que os itens filhos do contêiner devem ser dispostos em uma única coluna verticalmente*/
+    padding: 0 4rem;
+    height: 100%;
+    position: absolute; /*Permite posicionar um elemento em relação ao seu ancestral mais próximo que possui uma propriedade position*/
+    width: 100%;
+}
+
+/*h1*/
+.container h1{
+    font-family: 'Segoe UI', 'Poppins', Arial, sans-serif;
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+} 
+
+/*input*/
+.container input{
+    border: 1px solid #000;
+    margin: 12px 0;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;  /*Remove a linha de contorno que alguns navegadores colocam por padrão*/
+}
+
+/*Forgot password*/
+.form a.forgot-password {
+    color: #06c;
+    border-bottom: 1px solid #06c;
+}
+.form a.forgot-password:hover {
+    color: #005bb5;
+    border-bottom: 1px solid #005bb5;
+}
+
+/*mensagem para logar e criar conta - só aparecerá em dispositivos móveis*/
+.container form span.sign-in, .container form span.sign-up{
+    display: block;
+}
+
+.container form span.sign-in a, .container form span.sign-up a {
+    color: #06c;
+}
+
+.container form span.sign-in a:hover, .container form span.sign-up a:hover {
+    border-bottom: 1px solid #005bb5;
+    color: #005bb5;
+}
+
+/*spans*/
+.container span{
+    font-size: 0.9rem;
+    padding: 1rem 0;
+}
+
+/*link*/
+.container a{
+    color: #333;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+/*botões*/
+.btn{
+    font-size: 1rem;
+    padding: 10px 45px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #06c;
+}
+.btn:hover{
+    transition-duration: 200ms; /*duração da animação*/
+    background-color: #005bb5;
+    color: #fff;
+}
+
+/*span da validação do formulário*/
+.span-required{
+    font-size: 0.8rem;
+    color: red;
+    display: none;
+}
+
+/*icones*/
+.social-icons{
+    margin: 20px 0; 
+}
+.social-icons a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;   /*permite que um elemento seja exibido como um elemento de linha ocupando apenas o espaço necessário na linha, enquanto ainda permite que seus filhos sejam organizados em um layout flexível, oferecendo controle sobre o posicionamento e dimensionamento desses filhos.*/
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 44px;
+    height: 44px;
+    color: #000;
+}
+.social-icons a:hover{
+    border: none;
+    background-color: #005bb5;
+    color: #fff;
+    scale: 110%;
+    transition-duration: 200ms;
+}
+.footer {
+    width: 100%;
+    background-color: #fff;
+}
+
+/*media para dispositivos screen e small*/
+@media screen and (max-width: 767.98px) {
+    body{
+        background-color: #fff;
+        background: none;
+        display: block;
+    }
+    .container{
+        margin: 0 0;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        height: 100%;
+        line-height: 20px;
+    }
+    .form{
+        width: 100%;
+        padding: 0 30px;
+    }
+    .container span{
+        text-align: center;
+    }
+    .footer {
+        background-color: #f5f5f5;
+    }
+}
+
+/*media para dispositivos small na horizontal*/
+@media (max-height: 500px) {
+    body{
+        background-color: #fff;
+        background: none;
+        display: block;
+    }
+    .container{
+        margin: 0 0;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        height: 100%;
+        line-height: 20px;
+    }
+    .form{
+        width: 100%;
+        padding: 0 30px;
+    }
+    .container span{
+        text-align: center;
+    }
+    .footer {
+        background-color: #f5f5f5;
+    }
+}
