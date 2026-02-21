@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "eletropoint/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "eletropoint/wsgi.py"
+    }
+  ]
+}
