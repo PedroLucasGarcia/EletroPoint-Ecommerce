@@ -363,7 +363,7 @@ a.variant.active:hover{border-color:var(--accent)}
 .account-nav .active,.account-nav button:hover,.account-nav a:hover{background:var(--gray)}
 .order{border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-bottom:14px}
 .order-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}
-.status{display:inline-block;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600;background:var(--gray)}
+.status{display:inline-flex;align-items:center;align-self:flex-start;padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600;line-height:1.4;background:var(--gray)}
 .status.pendente{background:#fff4e0;color:var(--warn)}
 .status.pago{background:var(--accent-soft);color:#004c99}
 .status.enviado{background:#efe8fd;color:#5b2bb5}

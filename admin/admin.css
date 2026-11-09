@@ -31,6 +31,7 @@ body.admin{background:var(--gray);font-size:16px}
 
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
 .toolbar input,.toolbar select{border:1px solid var(--line);border-radius:999px;padding:9px 16px;background:var(--bg);font-size:15px;min-width:0}
+.toolbar input:focus,.toolbar select:focus,.rowx input:focus,.rowx select:focus,.img-card input:focus,.img-card select:focus{outline:0;box-shadow:none}
 .toolbar input[type=search]{flex:1 1 240px}
 
 .tbl-wrap{overflow-x:auto;background:var(--bg);border-radius:var(--radius)}
