@@ -1,0 +1,391 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/smartphones/iphone17Pro{.html}?",
+      "destination": "/produto.html?slug=iphone-17-pro",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/s25-ultra{.html}?",
+      "destination": "/produto.html?slug=galaxy-s25-ultra",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/xiaomi15-ultra{.html}?",
+      "destination": "/produto.html?slug=xiaomi-15-ultra",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/iphone17{.html}?",
+      "destination": "/produto.html?slug=iphone-17",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/pixel10-pro-xl{.html}?",
+      "destination": "/produto.html?slug=pixel-10-pro-xl",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/iphone-air{.html}?",
+      "destination": "/produto.html?slug=iphone-air",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/s25-edge{.html}?",
+      "destination": "/produto.html?slug=galaxy-s25-edge",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/z-fold-7{.html}?",
+      "destination": "/produto.html?slug=galaxy-z-fold-7",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/xiaomi15t-pro{.html}?",
+      "destination": "/produto.html?slug=xiaomi-15t-pro",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/z-flip-7{.html}?",
+      "destination": "/produto.html?slug=galaxy-z-flip-7",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/redmi-note15-pro-plus{.html}?",
+      "destination": "/produto.html?slug=redmi-note-15-pro-plus",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/iphone16e{.html}?",
+      "destination": "/produto.html?slug=iphone-16e",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/pixel10-pro{.html}?",
+      "destination": "/produto.html?slug=pixel-10-pro",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/iphone16{.html}?",
+      "destination": "/produto.html?slug=iphone-16",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/s25{.html}?",
+      "destination": "/produto.html?slug=galaxy-s25",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/pixel10{.html}?",
+      "destination": "/produto.html?slug=pixel-10",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/xiaomi15{.html}?",
+      "destination": "/produto.html?slug=xiaomi-15",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/xiaomi15t{.html}?",
+      "destination": "/produto.html?slug=xiaomi-15t",
+      "permanent": true
+    },
+    {
+      "source": "/computadores/ryzen7-5800x{.html}?",
+      "destination": "/produto.html?slug=gaming-trendingpc-ryzen-7-5800x",
+      "permanent": true
+    },
+    {
+      "source": "/computadores/core-i5-14400f{.html}?",
+      "destination": "/produto.html?slug=daitona-pc-i5-14400f",
+      "permanent": true
+    },
+    {
+      "source": "/computadores/ryzen7-8700f{.html}?",
+      "destination": "/produto.html?slug=gaming-trendingpc-ryzen-7-8700f",
+      "permanent": true
+    },
+    {
+      "source": "/computadores/ryzen9-5900x{.html}?",
+      "destination": "/produto.html?slug=gaming-trendingpc-ryzen-9-5900x",
+      "permanent": true
+    },
+    {
+      "source": "/computadores/core-i5-12400f{.html}?",
+      "destination": "/produto.html?slug=gaming-pc-racing-i5-12400f",
+      "permanent": true
+    },
+    {
+      "source": "/portateis/macbook-air{.html}?",
+      "destination": "/produto.html?slug=macbook-air",
+      "permanent": true
+    },
+    {
+      "source": "/portateis/book4{.html}?",
+      "destination": "/produto.html?slug=galaxy-book-4",
+      "permanent": true
+    },
+    {
+      "source": "/portateis/macbook-pro{.html}?",
+      "destination": "/produto.html?slug=macbook-pro",
+      "permanent": true
+    },
+    {
+      "source": "/portateis/ideapad-slim5{.html}?",
+      "destination": "/produto.html?slug=lenovo-ideapad-slim-5",
+      "permanent": true
+    },
+    {
+      "source": "/tablets/ipad-air{.html}?",
+      "destination": "/produto.html?slug=ipad-air",
+      "permanent": true
+    },
+    {
+      "source": "/tablets/tab-s10-plus{.html}?",
+      "destination": "/produto.html?slug=galaxy-tab-s10-plus",
+      "permanent": true
+    },
+    {
+      "source": "/tablets/ipad-pro{.html}?",
+      "destination": "/produto.html?slug=ipad-pro",
+      "permanent": true
+    },
+    {
+      "source": "/tablets/tab-s10-fe{.html}?",
+      "destination": "/produto.html?slug=galaxy-tab-s10-fe",
+      "permanent": true
+    },
+    {
+      "source": "/tablets/ipad{.html}?",
+      "destination": "/produto.html?slug=ipad",
+      "permanent": true
+    },
+    {
+      "source": "/tablets/redmi-pad2-pro{.html}?",
+      "destination": "/produto.html?slug=redmi-pad-2-pro",
+      "permanent": true
+    },
+    {
+      "source": "/consolas/playstation5pro{.html}?",
+      "destination": "/produto.html?slug=ps5-pro",
+      "permanent": true
+    },
+    {
+      "source": "/consolas/switch2{.html}?",
+      "destination": "/produto.html?slug=switch-2-plus-mario-kart",
+      "permanent": true
+    },
+    {
+      "source": "/consolas/xbox-x{.html}?",
+      "destination": "/produto.html?slug=xbox-series-x",
+      "permanent": true
+    },
+    {
+      "source": "/consolas/playstation5{.html}?",
+      "destination": "/produto.html?slug=ps5-edicao-digital",
+      "permanent": true
+    },
+    {
+      "source": "/consolas/xbox-s{.html}?",
+      "destination": "/produto.html?slug=xbox-series-s",
+      "permanent": true
+    },
+    {
+      "source": "/consolas/switch{.html}?",
+      "destination": "/produto.html?slug=switch-oled",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/smartphone-apple{.html}?",
+      "destination": "/categoria.html?c=smartphones&marca=apple",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/smartphone-google{.html}?",
+      "destination": "/categoria.html?c=smartphones&marca=google",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/smartphone-samsung{.html}?",
+      "destination": "/categoria.html?c=smartphones&marca=samsung",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/smartphone-xiaomi{.html}?",
+      "destination": "/categoria.html?c=smartphones&marca=xiaomi",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones/smartphones{.html}?",
+      "destination": "/categoria.html?c=smartphones",
+      "permanent": true
+    },
+    {
+      "source": "/smartphones{/}?",
+      "destination": "/categoria.html?c=smartphones",
+      "permanent": true
+    },
+    {
+      "source": "/computadores/computador-amd{.html}?",
+      "destination": "/categoria.html?c=computadores&marca=amd",
+      "permanent": true
+    },
+    {
+      "source": "/computadores/computador-intel{.html}?",
+      "destination": "/categoria.html?c=computadores&marca=intel",
+      "permanent": true
+    },
+    {
+      "source": "/computadores/computadores{.html}?",
+      "destination": "/categoria.html?c=computadores",
+      "permanent": true
+    },
+    {
+      "source": "/computadores{/}?",
+      "destination": "/categoria.html?c=computadores",
+      "permanent": true
+    },
+    {
+      "source": "/portateis/portatil-apple{.html}?",
+      "destination": "/categoria.html?c=portateis&marca=apple",
+      "permanent": true
+    },
+    {
+      "source": "/portateis/portatil-lenovo{.html}?",
+      "destination": "/categoria.html?c=portateis&marca=lenovo",
+      "permanent": true
+    },
+    {
+      "source": "/portateis/portatil-samsung{.html}?",
+      "destination": "/categoria.html?c=portateis&marca=samsung",
+      "permanent": true
+    },
+    {
+      "source": "/portateis/portateis{.html}?",
+      "destination": "/categoria.html?c=portateis",
+      "permanent": true
+    },
+    {
+      "source": "/portateis{/}?",
+      "destination": "/categoria.html?c=portateis",
+      "permanent": true
+    },
+    {
+      "source": "/tablets/tablet-apple{.html}?",
+      "destination": "/categoria.html?c=tablets&marca=apple",
+      "permanent": true
+    },
+    {
+      "source": "/tablets/tablet-samsung{.html}?",
+      "destination": "/categoria.html?c=tablets&marca=samsung",
+      "permanent": true
+    },
+    {
+      "source": "/tablets/tablet-xiaomi{.html}?",
+      "destination": "/categoria.html?c=tablets&marca=xiaomi",
+      "permanent": true
+    },
+    {
+      "source": "/tablets/tablets{.html}?",
+      "destination": "/categoria.html?c=tablets",
+      "permanent": true
+    },
+    {
+      "source": "/tablets{/}?",
+      "destination": "/categoria.html?c=tablets",
+      "permanent": true
+    },
+    {
+      "source": "/consolas/consola-nintendo{.html}?",
+      "destination": "/categoria.html?c=consolas&marca=nintendo",
+      "permanent": true
+    },
+    {
+      "source": "/consolas/consola-sony{.html}?",
+      "destination": "/categoria.html?c=consolas&marca=sony",
+      "permanent": true
+    },
+    {
+      "source": "/consolas/consola-xbox{.html}?",
+      "destination": "/categoria.html?c=consolas&marca=xbox",
+      "permanent": true
+    },
+    {
+      "source": "/consolas/consolas{.html}?",
+      "destination": "/categoria.html?c=consolas",
+      "permanent": true
+    },
+    {
+      "source": "/consolas{/}?",
+      "destination": "/categoria.html?c=consolas",
+      "permanent": true
+    },
+    {
+      "source": "/loginPage{.html}?",
+      "destination": "/login.html",
+      "permanent": true
+    },
+    {
+      "source": "/registerPage{.html}?",
+      "destination": "/registo.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/admin/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300"
+        }
+      ]
+    }
+  ]
+}
