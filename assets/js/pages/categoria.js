@@ -36,7 +36,7 @@ function renderHead() {
   let title = 'Todos os produtos';
   let subtitle = 'Explore todo o catálogo EletroPoint.';
   if (term) { title = `Resultados para “${term}”`; subtitle = ''; }
-  else if (category && brand) { title = `${brand.name} · ${category.name}`; subtitle = category.description || ''; }
+  else if (category && brand) { title = `${category.name} ${brand.name}`; subtitle = category.description || ''; }
   else if (category) { title = category.name; subtitle = category.description || ''; }
   else if (brand) { title = brand.name; subtitle = `Todos os produtos ${brand.name}.`; }
   document.title = `${title} — EletroPoint`;
